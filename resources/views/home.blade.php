@@ -13,8 +13,12 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
+                    {{ __('You are logged in!') }} {{Auth::user()->name}}!<br>
+                    @if(empty(Auth::user()->password))
+                    {{Auth::user()->socialProfiles[0]->social_id}}<br>
+                    {{Auth::user()->socialProfiles[0]->social_name}}<br>
+                    <img src="{{Auth::user()->socialProfiles[0]->social_avatar}}" alt=""><br>
+                    @endif
                 </div>
             </div>
         </div>
