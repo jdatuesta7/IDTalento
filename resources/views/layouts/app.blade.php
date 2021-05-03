@@ -51,9 +51,9 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    <div class="avatar mr-5" style="background-image: url({{Auth::user()->socialProfiles[0]->social_avatar}})"></div>{{-- <img style="width: 15%;" class="" src="{{Auth::user()->socialProfiles[0]->social_avatar}}" alt=""> --}} <b>{{ Auth::user()->name }}</b> 
                                 </a>
-
+                                
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
