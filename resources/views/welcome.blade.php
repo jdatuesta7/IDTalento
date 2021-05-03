@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
         <!-- Styles -->
         <style>
@@ -79,14 +80,21 @@
                 </div>
             @endif
 
-            <div class="card border border-dark" style="width: 18rem;">
-                <div class="card-body">
-                  <h2 class="card-title">{{__('Login')}}</h2>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
+            {{-- <div class="container">
+                <div class="row">
+                    <div class="col">
+                        @auth
+                        <button type="button" href="{{ url('/home') }}" class="btn btn-primary">{{__('Home')}}</button>
+                        @else
+                        <button type="button" href="{{ route('login') }}" class="btn btn-primary">{{__('Login')}}</button>
+                        @if (Route::has('register'))
+                            <button type="button" href="{{ route('register') }}" class="btn btn-primary">{{__('Login')}}</button>
+                        @endif
+                        @endauth
+                    </div>
                 </div>
-            </div>
+            </div> --}}
+            
         </div>
     </body>
 </html>

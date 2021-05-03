@@ -13,10 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
+Route::get('/', 'Auth\LoginController@showLoginForm');
+
+// Route::post('/login', 'Auth\LoginController@login')->name('login.login');
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Login redes sociales
+Route::get('login/{driver}', 'Auth\LoginController@redirectToProvider');
+Route::get('login/{driver}/callback', 'Auth\LoginController@handleProviderCallback');
+
+
+
+
+

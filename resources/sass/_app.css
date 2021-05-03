@@ -1,0 +1,15 @@
+body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-image: url('../../public/img/lol.jpg');
+    background-position: inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 90vh;
+    margin: 0;
+}
+
