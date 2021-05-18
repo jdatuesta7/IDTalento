@@ -14711,16 +14711,12 @@ a:hover {
   margin-bottom: -16px;
 }
 
-/* El estilo de los iconos de flecha combinados */
-/* .parent-nav significa que la etiqueta padre después significa agregar el icono de fuente después de esto */
 .parent-nav:after {
   content: "";
   /* Icono de flecha hacia arriba */
   font-family: FontAwesome;
 }
 
-/* El estilo cuando el icono de flecha se expande */
-/* contraído es un atributo de bootstrap, lo que significa que el ícono se agrega cuando se expande la etiqueta principal. Después significa que el ícono de fuente se agregará después */
 .parent-nav.collapsed:after {
   content: "";
   /* Icono de flecha hacia abajo */

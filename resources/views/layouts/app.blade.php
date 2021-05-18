@@ -25,7 +25,7 @@
 
     <div class="d-flex">
         @auth
-            @include('layouts.leftBar2') 
+            @include('layouts.leftBar') 
         @endauth
         <div class="w-100">
             @include('layouts.navBar')

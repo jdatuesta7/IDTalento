@@ -1,51 +1,26 @@
-<nav id="sidebar-wrapper">
-    @auth
-        <ul class="sidebar-nav">
+<div id="sidebar-container" class="bg-primary">
+    <div class="logo">
+        <h4 class="text-light font-weight-bold">ID Talento</h4>
+    </div>
+    <div class="sidebar-menu">
+    
+        <a href="#" class="d-block p-3 text-light font-weight-bold"> <i class="fas fa-border-all mr-2 fa-lg"></i> Escritorio</a>
+        <a href="#" class="d-block p-3 text-light font-weight-bold"> <i class="fas fa-bell mr-2 fa-lg"></i> Notificacion</a>
+        
+        <a href="#submenu" data-toggle="collapse" class="parent-nav collapsed d-block p-3 text-light font-weight-bold"> <i class="fas fa-file-alt mr-2 fa-lg"></i> <span style="margin-right: 60px;">Hoja de vida</span> </a>
+        <div id="submenu" class="collapse child-nav">
+            <ul>
+                <li><a class="d-block p-3 text-light" href="#">{{ __('Datos Personales') }} </a></li>
+                <li><a class="d-block p-3 text-light" href="#">{{ __('Formacion Academica') }} </a></li>
+                <li><a class="d-block p-3 text-light conocimientoInformatico" href="#">{{ __('Conocimientos Informaticos') }} </a></li>
+                <li><a class="d-block p-3 text-light conocimientoInformatico" href="#">{{ __('Experiencia Laboral') }} </a></li>
+                <li><a class="d-block p-3 text-light conocimientoInformatico" href="#">{{ __('Idiomas') }} </a></li>
+                <li><a class="d-block p-3 text-light conocimientoInformatico" href="#">{{ __('Enlaces Adicionales') }} </a></li>
+                <li><a class="d-block p-3 text-light conocimientoInformatico" href="#">{{ __('Hoja de vida') }} </a></li>
+            </ul>
+        </div>
 
-            {{-- exclusive modules for the administrator --}}
-            @if (Auth::user()->id != 1)
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    {{-- <i class="color-session fas fa-store text-primary"></i> --}}
-                    {{ __('Dashboard')}}
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    {{-- <i class="color-session fas fa-store text-primary"></i> --}}
-                    {{ __('Commerce Type')}}
-                </a>
-            </li>
-            @endif
-
-            {{-- exclusive modules for the administrator and commerces --}}
-            @if (Auth::user()->id != 1 || !empty(Auth::user()->getCommerce))
-            <li class="nav-item">
-                <a class="nav-link"
-                    href="#">
-                    {{-- <i class="color-session fas fa-store text-primary"></i> --}}
-                    {{ __('Commerce').(Auth::user()->id == 1 ? 's' : '')}}
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    {{-- <i class="color-session fas fa-store text-primary"></i> --}}
-                    {{ __('Product Category') }}
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    {{-- <i class="color-session fas fa-store text-primary"></i> --}}
-                    {{ __('Product').'s' }}
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    {{__('Orders') }}
-                </a>
-            </li>
-            @endif
-
-        </ul>
-    @endauth
-</nav>
+        <a href="#" class="d-block p-3 text-light font-weight-bold buscarEmpleo"><i class="fas fa-search mr-2 fa-lg"></i> Buscar Empleo</a>
+        <a href="#" class="d-block p-3 text-light font-weight-bold"><i class="fas fa-cog mr-2 fa-lg"></i> Configuracion</a>
+    </div>
+</div>
