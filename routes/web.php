@@ -29,7 +29,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('login/{driver}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{driver}/callback', 'Auth\LoginController@handleProviderCallback');
 
-
+//UserProfile
+Route::get('Profile/edit','ProfileController@Edit')->name('profile.edit');
+Route::put('Profile/update','ProfileController@Update')->name('profile.update');
 
 
 

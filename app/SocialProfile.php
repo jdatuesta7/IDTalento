@@ -12,7 +12,7 @@ class SocialProfile extends Model
     protected $fillable = ['user_id','social_id','social_name','social_avatar'];
 
     //Relacion uno a muchos inversa
-    public function users(){
-        $this->belongsTo(User::class);
+    public function getUser(){
+        return $this->belongsTo(User::class,'user_id');
     }
 }

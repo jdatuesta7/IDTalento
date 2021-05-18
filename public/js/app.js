@@ -1834,13 +1834,109 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./resources/js/_global.js":
+/*!*********************************!*\
+  !*** ./resources/js/_global.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Global)
+/* harmony export */ });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Global = /*#__PURE__*/function () {
+  function Global() {
+    _classCallCheck(this, Global);
+  }
+
+  _createClass(Global, [{
+    key: "initialize",
+    value: function initialize() {
+      this.changeImgHandler();
+    }
+  }, {
+    key: "changeImgHandler",
+    value: function changeImgHandler() {
+      var inputAvatar = document.getElementById('inputAvatar');
+      var avatarUpdate = document.getElementById('avatarUpdate');
+
+      if (inputAvatar == null) {
+        return;
+      }
+
+      inputAvatar.onchange = function () {
+        if (inputAvatar.files && inputAvatar.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+            avatarUpdate.style.backgroundImage = "url('" + e.target.result + "')";
+            avatarUpdate.setAttribute('src', e.target.result);
+          };
+
+          reader.readAsDataURL(inputAvatar.files[0]);
+        }
+      };
+    }
+  }]);
+
+  return Global;
+}();
+
+
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_global */ "./resources/js/_global.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+
+var global = new _global__WEBPACK_IMPORTED_MODULE_0__.default();
+document.addEventListener("DOMContentLoaded", function (event) {
+  global.initialize();
+}); // jQuery(function($){
+//     $(".sidebar-dropdown > a").click(function() {
+//         $(".sidebar-submenu").slideUp(200);
+//         if(
+//             $(this)
+//             .parent()
+//             .hasClass("active")
+//         ) {
+//             $(".sidebar-dropdown").removeClass("active");
+//             $(this)
+//             .parent()
+//             .removeClass("active");
+//         } else {
+//             $(".sidebar-dropdown").removeClass("active");
+//             $(this)
+//             .next(".sidebar-submenu")
+//             .slideDown(200);
+//             $(this)
+//             .parent()
+//             .addClass("active");
+//         }
+//     });
+//     // $("#close-sidebar").click(function() {
+//     //     $(".page-wrapper").removeClass("toggled");
+//     // });
+//     // $("#show-sidebar").click(function() {
+//     //     $(".page-wrapper").addClass("toggled");
+//     // });
+// });
 
 /***/ }),
 

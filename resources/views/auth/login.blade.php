@@ -66,8 +66,8 @@
                         <p class="text-center mt-2"><strong>o</strong></p>
                         <div class="row mt-2">
                             <div class="d-grid gap-2 col-6 mx-auto">
-                                <a class="btn btn-block btn-primary" href="{{ url('login/facebook') }}" role="button"><i class="fab fa-2x fa-facebook-square"></i> <h5>{{__('Login with Facebook')}}</h5></a>
-                                <a class="btn btn-block btn-danger" href="{{ url('login/google') }}" role="button"><i class="fab fa-2x fa-google"></i> <h5>{{__('Login with Google')}}</h5></a>
+                                <a class="btn btn-block btn-primary" href="{{ url('login/facebook') }}" role="button"><i class="fab fa-2x fa-facebook-square"></i> </a>
+                                <a class="btn btn-block btn-danger" href="{{ url('login/google') }}" role="button"><i class="fab fa-2x fa-google"></i> </a>
                               </div>
                         </div>
                     </form>

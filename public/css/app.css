@@ -14611,28 +14611,118 @@ h3 {
     border-color: #dee2e6;
   }
 }
+:root {
+  --primary: #111b54;
+  --light: #ffffff;
+  --grey: #efefef;
+}
+
 body {
   overflow-y: auto;
   overflow-x: hidden;
-  background-image: url(/images/lol.jpg?158ee54da19f43c492aaeca930db59b1);
+  /* background-image: url('../../public/img/portada.jpg'); */
+  background-color: var(--light);
   background-position: inherit;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #fff;
-  color: #636b6f;
-  font-family: "Nunito", sans-serif;
-  font-weight: 200;
-  height: 90vh;
+  color: var(--primary);
+  font-family: "Muli", sans-serif;
+  font-weight: 300;
+  height: 100%;
   margin: 0;
+}
+
+html, body, .contenido {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.contenido {
+  height: calc(100% - 16px);
+  width: 75%;
+  padding: 8px;
+  overflow-y: auto;
 }
 
 div.avatar {
   /* cambia estos dos valores para definir el tamaño de tu círculo */
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   /* los siguientes valores son independientes del tamaño del círculo */
   background-repeat: no-repeat;
   background-position: 50%;
   border-radius: 50%;
   background-size: 100% auto;
+}
+
+div.profileAvatar {
+  /* cambia estos dos valores para definir el tamaño de tu círculo */
+  height: 300px;
+  width: 300px;
+  /* los siguientes valores son independientes del tamaño del círculo */
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+#sidebar-container a:hover {
+  background: #091558;
+}
+
+.child-nav a:hover {
+  background: var(--primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+#sidebar-container {
+  min-height: 100vh;
+  height: 100%;
+  /* Full-height: remove this if you want "auto" height */
+  /* width: 160px; Set the width of the sidebar */
+  position: fixed;
+  /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  /* background-color: #111; Black */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+#sidebar-container .logo {
+  padding: 0.875rem 1.25rem;
+}
+
+#sidebar-container .sidebar-menu {
+  width: 14rem;
+}
+
+.conocimientoInformatico {
+  margin-bottom: -16px;
+}
+
+/* El estilo de los iconos de flecha combinados */
+/* .parent-nav significa que la etiqueta padre después significa agregar el icono de fuente después de esto */
+.parent-nav:after {
+  content: "";
+  /* Icono de flecha hacia arriba */
+  font-family: FontAwesome;
+}
+
+/* El estilo cuando el icono de flecha se expande */
+/* contraído es un atributo de bootstrap, lo que significa que el ícono se agrega cuando se expande la etiqueta principal. Después significa que el ícono de fuente se agregará después */
+.parent-nav.collapsed:after {
+  content: "";
+  /* Icono de flecha hacia abajo */
+  font-family: FontAwesome;
 }

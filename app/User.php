@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'avatar'
     ];
 
     /**
@@ -39,7 +39,7 @@ class User extends Authenticatable
     ];
 
     //Relacion uno a muchos
-    public function socialProfiles(){
+    public function getSocialProfiles(){
         return $this->hasMany(SocialProfile::class);
     }
 }

@@ -41,5 +41,16 @@
     "All":  "Todos",
     "or" : "o",
     "Login with Facebook" : "Acceder con Facebook",
-    "Login with Google" : "Acceder con Google"
+    "Login with Google" : "Acceder con Google",
+    "Profile" : "Perfil",
+    "Update Profile" : "Actualizar Perfil",
+    "Cancel" : "Cancelar",
+    "Profile updated successfully" : "Perfil actualizado exitosamente",
+    "Profile Update" : "Actualizar Perfil",
+    "Current Password" : "Contraseña Actual",
+    "New Password" : "Nueva Contraseña",
+    "Confirm New Password" : "Confirmar Nueva Contraseña",
+    "Profile Photo" : "Foto de Perfil",
+    "Change Password" : "Cambiar Contraseña",
+    "The current password you entered is incorrect" : "La actual contraseña que has introducido es incorrecta"
 }
