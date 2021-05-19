@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'ID Talento') }}</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -24,6 +24,9 @@
 <body>
 
     <div class="d-flex">
+        @auth
+            @include('layouts.leftBar') 
+        @endauth
         <div class="w-100">
             @include('layouts.navBar')
 

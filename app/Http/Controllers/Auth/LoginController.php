@@ -99,4 +99,8 @@ class LoginController extends Controller
 
         return view('home', compact('social_profile'));
     }
+
+    public function showLoginFormBusiness(){
+        return view('auth.business.login');
+    }
 }

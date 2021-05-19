@@ -1,6 +1,6 @@
 <div id="sidebar-container" class="bg-primary">
-    <div class="logo">
-        <h4 class="text-light font-weight-bold">ID Talento</h4>
+    <div class="logo-leftbar">
+        <img src="/img/logoidtalento.png" alt="">
     </div>
     <div class="sidebar-menu">
     

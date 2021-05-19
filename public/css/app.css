@@ -14620,7 +14620,7 @@ h3 {
 body {
   overflow-y: auto;
   overflow-x: hidden;
-  /* background-image: url('../../public/img/portada.jpg'); */
+  /* background-image: url('../../public/img/login-people.jpg'); */
   background-color: var(--light);
   background-position: inherit;
   background-repeat: no-repeat;
@@ -14665,6 +14665,11 @@ div.profileAvatar {
   background-size: 100% auto;
 }
 
+.logo {
+  height: 50%;
+  width: 50%;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -14699,7 +14704,7 @@ a:hover {
   padding-top: 20px;
 }
 
-#sidebar-container .logo {
+#sidebar-container .logo-leftbar {
   padding: 0.875rem 1.25rem;
 }
 

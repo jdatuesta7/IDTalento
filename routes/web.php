@@ -19,7 +19,13 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', 'Auth\LoginController@showLoginForm');
+Route::view('/', 'index')->name('index');
+
+//Login Personas
+Route::get('/login/personas', 'Auth\LoginController@showLoginForm')->name('login.people');
+
+//Login Empresas
+Route::get('/login/empresas', 'Auth\LoginController@showLoginFormBusiness')->name('login.business');
 
 // Route::post('/login', 'Auth\LoginController@login')->name('login.login');
 
