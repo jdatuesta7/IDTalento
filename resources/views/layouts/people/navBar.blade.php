@@ -1,5 +1,8 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
+        <a class="btn btn-primary mr-2" href="#sidebar-container" data-toggle="collapse" role="button">
+            <i class="fas fa-bars"></i>
+        </a>
         <a class="navbar-brand" href="{{ route('login.people') }}">
             <img src="/img/logoidtalento.png" alt="" class="logo">
         </a>

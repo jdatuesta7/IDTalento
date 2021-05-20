@@ -5,12 +5,6 @@
 <div class="editProfile flex-column container ml-5 mt-3">
 
     @if(session('status'))
-        {{-- <div class="alert alert-success" role="alert">
-            {{session('status')}}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">x</span>
-            </button>
-        </div> --}}
         <x-alert class="alert alert-success">
             {{ session('status') }}
         </x-alert>

@@ -53,10 +53,6 @@ div.profileAvatar {
     background-size: 100% auto;
 }
 
-.editProfile {
-    /* margin-left: 100px !important; */
-}
-
 .logo{
     height: 50%;
     width: 50%;
@@ -64,6 +60,12 @@ div.profileAvatar {
 
 a:hover {
     text-decoration: none;
+}
+
+.active {
+    color: var(--primary) !important;
+    text-decoration: none;
+    background-color: var(--grey);
 }
 
 #sidebar-container a:hover {
@@ -91,7 +93,7 @@ a:hover {
 }
 
 #sidebar-container .logo-leftbar {
-    padding: .875rem 1.25rem;
+    padding: .775rem .765rem;
 }
 
 #sidebar-container .sidebar-menu {

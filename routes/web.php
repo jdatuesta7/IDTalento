@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Auth::routes();
 
@@ -27,9 +24,8 @@ Route::get('/login/personas', 'Auth\LoginController@showLoginForm')->name('login
 //Login Empresas
 Route::get('/login/empresas', 'Auth\LoginController@showLoginFormBusiness')->name('login.business');
 
-// Route::post('/login', 'Auth\LoginController@login')->name('login.login');
-
-Route::get('/home', 'HomeController@index')->name('home');
+//Personas modulo
+Route::get('/home', 'DashboardController@index')->name('dashboard');
 
 //Login redes sociales
 Route::get('login/{driver}', 'Auth\LoginController@redirectToProvider');

@@ -97,11 +97,12 @@ class LoginController extends Controller
         // $firstName = $separada[0];
         //dd($firstName);
 
-        return view('home', compact('social_profile'));
+        return view('people.dashboard', compact('social_profile'));
     }
 
     public function showLoginFormBusiness(){
         return view('auth.business.login');
     }
 
+    
 }
