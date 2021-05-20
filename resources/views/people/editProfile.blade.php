@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.people.app')
 
 @section('content')
 
-<div class="flex-column container">
+<div class="editProfile flex-column container ml-5 mt-3">
 
     @if(session('status'))
         {{-- <div class="alert alert-success" role="alert">

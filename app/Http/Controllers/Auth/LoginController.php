@@ -103,4 +103,5 @@ class LoginController extends Controller
     public function showLoginFormBusiness(){
         return view('auth.business.login');
     }
+
 }

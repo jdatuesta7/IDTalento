@@ -14665,6 +14665,10 @@ div.profileAvatar {
   background-size: 100% auto;
 }
 
+.editProfile {
+  /* margin-left: 100px !important; */
+}
+
 .logo {
   height: 50%;
   width: 50%;

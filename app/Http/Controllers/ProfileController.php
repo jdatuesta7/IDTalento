@@ -15,7 +15,7 @@ use App\User;
 class ProfileController extends Controller
 {
     public function edit(){
-        return view('editProfile');
+        return view('people.editProfile');
     }
 
     public function update(Request $request){
