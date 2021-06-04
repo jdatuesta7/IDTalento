@@ -22,20 +22,32 @@
 
 </head>
 <body>
+    {{-- @include('layouts.people.navBar')
 
-    <div class="d-flex">
+    <div id="wrapper">
         @auth
             @include('layouts.people.leftBar') 
         @endauth
-        <div class="w-100">
-            @include('layouts.people.navBar')
-
+    
+        <div id="page-content-wrapper">
             <div class="container-fluid contenido">
                 @yield('content')
             </div>
-
         </div>
-    </div>
+    </div> --}}
+    <div class="wrapper">
+		<!-- Sidebar -->
+		<nav id="sidebar" class="bg-primary">
+			@auth
+                @include('layouts.people.leftBar') 
+            @endauth
+		</nav>
 
+		<!-- Page Content -->
+		<div id="content">
+			@include('layouts.people.navBar')
+			@yield('content')
+		</div>
+	</div>
 </body>
 </html>

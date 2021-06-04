@@ -1,14 +1,11 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<nav class="navbar-top navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
-        <a class="btn btn-primary mr-2" href="#sidebar-container" data-toggle="collapse" role="button">
-            <i class="fas fa-bars"></i>
-        </a>
-        <a class="navbar-brand" href="{{ route('login.people') }}">
-            <img src="/img/logoidtalento.png" alt="" class="logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-            <span class="navbar-toggler-icon"></span>
+        @auth
+        <button type="button" id="sidebarCollapse" class="mr-5 btn btn-info">
+            <i class="fas fa-align-left"></i>
+            <span></span>
         </button>
+        @endauth
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
@@ -41,9 +38,9 @@
                         @endif
                         
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="navbar-itemRight nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> 
-                            <b>{{ Auth::user()->name }} </b> 
+                            <b class="mr-4">{{ Auth::user()->name }} </b> 
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             @if(!empty(Auth::user()->password))
