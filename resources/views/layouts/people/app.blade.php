@@ -37,11 +37,11 @@
     </div> --}}
     <div class="wrapper">
 		<!-- Sidebar -->
+        @auth
 		<nav id="sidebar" class="bg-primary">
-			@auth
-                @include('layouts.people.leftBar') 
-            @endauth
+            @include('layouts.people.leftBar') 
 		</nav>
+        @endauth
 
 		<!-- Page Content -->
 		<div id="content">

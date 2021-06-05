@@ -118,7 +118,7 @@
                     <button type="submit" class="btn btn-primary">{{__('Update Profile')}}</button>
                 </div>
                 <div class="col-2">
-                    <a class="btn btn-danger" type="button" href="{{ route('home') }}">{{ __('Cancel') }}</a>
+                    <a class="btn btn-danger" type="button" href="{{ route('dashboard') }}">{{ __('Cancel') }}</a>
                 </div>
             </div>
         </div>
