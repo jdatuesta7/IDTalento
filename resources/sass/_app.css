@@ -1,5 +1,5 @@
 :root {
-    --primary: #111b54;
+    --primary:#0c1b70;
     --light: #ffffff;
     --grey: #efefef;
 }
@@ -36,19 +36,9 @@ div.profileAvatar {
     width: 50%;
 }
 
-
-
 .active {
     color: var(--primary) !important;
     background-color: var(--grey);
-}
-
-#sidebar-container a:hover {
-    background: #091558;
-}
-
-.bg-primary {
-    background-color: var(--primary) !important;
 }
 
 /*---------------- Iconos ---------------------- */
@@ -149,10 +139,9 @@ a:focus {
     background: #fff !important;
 }
 
-/* #sidebar ul li.active > a,
-a[aria-expanded="true"] {
+/* #sidebar ul li ul ,a[aria-expanded="true"], li {
     color: #fff;
-    background: var(--primary) !important;
+    background: #0c1b70 !important;
 } */
 
 a[data-toggle="collapse"] {
@@ -170,7 +159,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: var(--primary) !important;
+    background: #071562 !important;
 }
 
 ul.CTAs {
