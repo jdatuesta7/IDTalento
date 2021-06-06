@@ -36,9 +36,9 @@ div.profileAvatar {
     width: 50%;
 }
 
-.active {
+.sectionActive {
     color: var(--primary) !important;
-    background-color: var(--grey);
+    background-color: #fff !important;
 }
 
 /*---------------- Iconos ---------------------- */

@@ -20,7 +20,7 @@
         <div class="card-header border-0">
             <div class="row align-items-center">
                 <div class="col">
-                    <h3 class="mb-0">{{__('Profile Update')}}</h3>
+                    <h3 class="mb-0 text-center">{{__('Profile Update')}}</h3>
                 </div>
             </div>
         </div>

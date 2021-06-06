@@ -26,6 +26,7 @@ Route::get('/login/empresas', 'Auth\LoginController@showLoginFormBusiness')->nam
 
 //Personas modulo
 Route::get('/home', 'DashboardController@index')->name('dashboard');
+Route::get('/candidate/personalInformation', 'PersonalInformationController@index')->name('personal.information');
 
 //Login redes sociales
 Route::get('login/{driver}', 'Auth\LoginController@redirectToProvider');
